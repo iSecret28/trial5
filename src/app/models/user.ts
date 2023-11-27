@@ -1,0 +1,21 @@
+export interface ProfileUser{
+    uid:string;
+    firstname?:string;
+    lastname?:string;
+    streetadd?:string;
+    city?:string;
+    region?:string;
+    postal?:string;
+    country?:string;
+    email?:string;
+    phone?:string;
+    password?:string;
+    name?:string;
+    breed?:string;
+    gender?:string;
+    height?:string;
+    weight?:string;
+    age?:string;
+    petphoto?:string;
+    userphoto?:string;
+}

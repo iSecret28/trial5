@@ -1,0 +1,25 @@
+<ion-header [translucent]="true" class="ion-no-border">
+
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Dogs" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons collapse="true" slot="end">
+      <ion-button (click)="openNewContactModal()">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let pet of petInfo | async" [routerLink]="'/dog-details/' + pet.id">
+      <ion-card-title>{{ pet.name}}</ion-card-title>
+    </ion-card>
+
+</ion-content>

@@ -1,0 +1,15 @@
+div h3
+{
+    text-align: center;
+
+}
+.btn-with-badge::after {
+    content: '5';
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 1px 5px;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+  }

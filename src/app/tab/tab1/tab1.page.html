@@ -1,0 +1,50 @@
+<ion-content>
+  
+  <div class="user" *ngIf="user$ | async as User">
+    
+    <ion-avatar slot="start"><img alt=""/> </ion-avatar>
+    <p>Hello,<b>{{User.firstname}}</b></p>
+  </div>
+
+  <div class="act">
+    <ion-card>
+      <ion-card-title text-wrap>Find more fun of your pet</ion-card-title>
+      <div class="link">
+        <p>Click here </p>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </div> 
+    </ion-card>
+  </div>
+
+  <div class="cards">
+    
+    <ion-card class="paw">
+      <ion-icon  name="paw-outline" ></ion-icon>
+    </ion-card>
+    
+    <ion-card class="person">
+      <ion-icon name="person"></ion-icon>
+    
+    </ion-card>
+    <ion-card class="bag">
+      <ion-icon name="bag-add"></ion-icon>
+    </ion-card>
+    <ion-card class="barb">
+      <ion-icon name="barbell"></ion-icon>
+    </ion-card>
+    <ion-card class="store">
+      <ion-icon name="storefront-outline"></ion-icon>
+    </ion-card>
+    <ion-card class="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-card>
+    <ion-card class="camera">
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-card>
+    <ion-card class="cut">
+      <ion-icon name="cut-outline"></ion-icon>
+      </ion-card>
+  </div>
+ 
+  <li> </li>
+</ion-content>

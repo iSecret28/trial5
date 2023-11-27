@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="petInfo">
+      <ion-back-button text="{{petInfo.name}}" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="petInfo">
+
+  <ion-card>
+    <ion-card-content>
+      {{petInfo.med}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      {{petInfo.vac}}
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

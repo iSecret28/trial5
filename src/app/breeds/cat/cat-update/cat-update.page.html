@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border" *ngIf="petInfo">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="'/cat-details/' + petInfo.id">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button strong="true" color="primary" [disabled]="!updatepetInfoForm.valid || !formIsEdited" (click)="submitForm()">
+        Done
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="petInfo">
+
+  <ion-row class="add-photo-wrapper">
+    <ion-button fill="clear">Add Photo</ion-button>
+  </ion-row>
+
+  <form [formGroup]="updatepetInfoForm" #updateForm="ngForm" (ngSubmit)="updatepetInfo(updatepetInfoForm.value)" *ngIf="petInfo">
+    <ion-list lines="full">
+      <ion-item lines="full">
+        <ion-input placeholder="Dog Breed" clearInput="true" formControlName="name" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea rows="8" placeholder="Description" clearInput="true" formControlName="desc" required></ion-textarea>
+      </ion-item>
+    
+      <ion-item>
+        <ion-textarea rows="8" placeholder="Origin" clearInput="true" formControlName="orig" required></ion-textarea>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

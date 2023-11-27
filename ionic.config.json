@@ -1,0 +1,7 @@
+{
+  "name": "ptsystem",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

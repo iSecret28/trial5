@@ -1,0 +1,19 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Cats" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons collapse="true" slot="end">
+      <ion-button (click)="openNewCatInfoModal()">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let pet of petInfo | async" [routerLink]="'/cat-details/' + pet.id">
+      <ion-label>{{ pet.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,20 @@
+ion-item {
+    animation: popIn 0.5s calc(var(--animation-order) * 90ms) both ease-in;
+
+  }
+  
+  @keyframes popIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) translateY(-50px,-50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+ion-card {
+  padding: 20px;
+}

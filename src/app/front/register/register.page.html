@@ -1,0 +1,64 @@
+<ion-content class="ion-padding"> 
+  
+  <form [formGroup]="credentials" (ngSubmit)="submit()">
+    <h1>Register</h1>
+    <ion-label>Owner or Guardian's Name</ion-label>
+
+    <div class="user_name">
+      <ion-item fill="solid">
+        <ion-input formControlName="firstname" placeholder="First"></ion-input>
+      </ion-item>
+      <div class="last">
+        <ion-item fill="solid">
+          <ion-input placeholder="Last" formControlName="lastname"></ion-input>
+        </ion-item>
+      </div>
+    </div>
+    
+    <ion-label>Address</ion-label>
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <!-- floating label na lang alisin na yung placeholder -->
+      <ion-label position="floating">Street</ion-label>
+      <ion-input placeholder="Street Address" formControlName="streetadd"></ion-input>
+      
+    </ion-item>
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input placeholder="City" formControlName="city"></ion-input>
+      
+    </ion-item>
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input placeholder="Region" formControlName="region"></ion-input>
+      
+    </ion-item>
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input placeholder="Postal/Zip Code" formControlName="postal"></ion-input>
+      
+    </ion-item>
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input placeholder="Country" formControlName="country"></ion-input>
+      
+    </ion-item>
+    <ion-label>Email</ion-label>
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+      <ion-note slot="error">Invalid Email</ion-note>
+    </ion-item>
+
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input placeholder="09** *** ****" formControlName="phone"></ion-input>
+    </ion-item>
+    <ion-item fill="solid">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="{{ showPassword ? 'text' : 'password' }}" formControlName="password"></ion-input>
+      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors"></ion-note>
+      <ion-icon class="icon" slot="end" [name]="showPassword ? 'eye' : 'eye-off'" (click)="togglePasswordVisibility()"></ion-icon>
+    </ion-item> 
+    <div class="fpass">
+      <p>Already have an account?  <a (click)="login()">Login</a> </p>
+     
+    </div>     
+    <div class="menubtn">
+      <ion-button class="regBtn" type="submit" expand="block"shape="round">Register</ion-button>
+    </div>
+  </form>
+</ion-content>

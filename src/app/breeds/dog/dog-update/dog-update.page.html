@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border" *ngIf="petInfo">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="'/dog-details/' + petInfo.id">
+        Cancel
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button strong="true" color="primary"(click)="submitForm()">
+        Done
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="petInfo">
+  <div>
+    <img [src]="updatepetInfoForm.get('petphoto')?.value || petInfo.petphoto" *ngIf="updatepetInfoForm.get('petphoto').value || petInfo.petphoto">
+    <!-- Loading indicator div with *ngIf -->
+    <div *ngIf="loading" class="loading-indicator">
+      <!-- You can use a spinner, progress bar, or any other loading animation here -->
+      <div class="spinner"></div>
+      <p>Uploading...</p>
+    </div>
+    
+    <div class="button">
+      <button class="myButton">
+        <label for="file-input">Update Photo</label>
+        <input type="file" id="file-input" multiple (change)="onPhotoSelected($event)" style="display: none;" />
+      </button>
+    </div>
+  </div>
+  
+<br>
+  <form [formGroup]="updatepetInfoForm" #updateForm="ngForm" (ngSubmit)="updatepetInfo(updatepetInfoForm.value)" *ngIf="petInfo">
+    <ion-list lines="full">
+      <ion-item lines="full">
+        <ion-input placeholder="Dog Breed" clearInput="true" formControlName="name" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea rows="8" placeholder="Description" clearInput="true" formControlName="desc" required></ion-textarea>
+      </ion-item>
+    
+    </ion-list>
+
+     <div class="button_delete">
+      <div class="myButton_delete">
+        <ion-label button="true" detail="false" (click)="deletepetInfo(petInfo.id)">
+          Delete Item
+        </ion-label>
+      </div>
+     </div>
+     
+  </form>
+</ion-content>

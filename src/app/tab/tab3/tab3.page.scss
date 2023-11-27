@@ -1,0 +1,45 @@
+.cards{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: center;
+    ion-card{
+        border-radius: 20px;
+        width: 350px;
+        height: 100px;
+        margin: 10px;
+    }
+}
+.fab{
+    ion-fab-button{
+            --border-radius: 20px;
+    }
+}
+.class1{
+    background-color: antiquewhite;
+}
+.class2{
+    background-color: rgb(237, 250, 215);
+}
+.class3{
+    background-color: rgb(215, 250, 239);
+}
+.class4{
+    background-color: rgb(250, 215, 215);
+}
+.class5{
+    background-color: rgb(215, 217, 250);
+}
+.class6{
+    background-color: rgb(215, 250, 229);
+}
+.class7{
+    background-color: rgb(234, 250, 215);
+}
+.class8{
+    background-color: rgb(242, 215, 250);
+}
+.class9{
+    background-color: rgb(250, 215, 223);
+}

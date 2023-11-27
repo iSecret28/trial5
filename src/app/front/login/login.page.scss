@@ -1,0 +1,83 @@
+.ion-padding {
+    background-image: url("/assets/str1.png");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    form {
+      background-color: rgba(255, 255, 255, 0.7);
+      height: max-content;
+      width: 100%;
+      padding-top: 100px;
+      max-width: 400px;
+      padding: 15px;
+      background-color: rgba(182, 156, 101, 0.5);
+      box-shadow: 0 0 10px rgba(52, 11, 11, 0.7);
+      animation: slide-up 0.5s ease-out;
+
+      ion-item {
+        --background: #ececec;
+
+        border-radius: 10px;
+
+        &:hover {
+          outline: 2px solid rgb(0, 144, 41);
+        }
+
+        ion-note {
+          background: #ececec;
+          margin-bottom: 5px;
+
+          color: red;
+          font-size: 13px;
+          font-family: Tahoma;
+        }
+      }
+
+      .icon {
+        color: rgb(91, 91, 224);
+
+        position: relative;
+        top: 0.5rem;
+      }
+
+    }
+
+
+    .fpass{
+        display: flex;
+        position: relative;
+        justify-content: end;
+    }
+
+    .buttons {
+      .signupBtn {
+
+        ion-button.signUp {
+          --background: rgb(24, 223, 24);
+
+          font-size: 20px;
+
+          height: 40px;
+        }
+        margin-top: 1rem;
+      }
+    }
+    
+  }
+  
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }    
+  }

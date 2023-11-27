@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="petInfo">
+      <ion-back-button text="{{petInfo.name}}" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="petInfo">
+
+  <ion-card>
+    <ion-card-content>
+      {{petInfo.desc}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title>Weight</ion-card-title>
+    <ion-card-content>
+      {{petInfo.weight}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title>Height</ion-card-title>
+    <ion-card-content>
+      {{petInfo.height}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title>Origin</ion-card-title>
+    <ion-card-content>
+      {{petInfo.origin}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-title>Temperament</ion-card-title>
+    <ion-card-content>
+      {{petInfo.temp}}
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

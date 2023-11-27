@@ -1,0 +1,40 @@
+
+<!-- Login Page -->
+<ion-content>
+  <div class="ion-padding">
+    <form (ngSubmit)="login()" [formGroup]="credentials"  >
+      <h1 class="">Login</h1>
+
+      <!-- Email Input -->
+      <ion-item lines="none" class="ion-margin-bottom">
+        <ion-label position="floating">Email</ion-label>
+
+        <ion-input type="email" email formControlName="email"></ion-input>
+        <ion-note *ngIf="(email.dirty || email.touched) && email.errors">Please provide a valid Email.</ion-note>
+      
+      </ion-item>
+
+      <!-- Password Input -->
+      <ion-item lines="none">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="{{ showPassword ? 'text' : 'password' }}" formControlName="password"></ion-input>
+        <ion-icon class="icon" slot="end" [name]="showPassword ? 'eye' : 'eye-off'" (click)="togglePasswordVisibility()"></ion-icon>
+        <ion-note *ngIf="(password.dirty || password.touched) && password.errors">Password must be atleast 6 characters.</ion-note>
+      </ion-item>
+
+      <div class="fpass">
+        <p>Forgot password?</p>
+      </div>
+
+      <div class="buttons">
+        <div class="loginBtn">
+          <ion-button type="submit" expand="block" shape="round" [disabled]="!credentials.valid">Sign In</ion-button>
+        </div>
+
+        <div class="signupBtn">
+          <ion-button class="signUp" type="button" expand="block" shape="round" (click)="signup()">Sign Up</ion-button>
+        </div>
+      </div>
+    </form>
+  </div>
+</ion-content>

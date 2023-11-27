@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="user$ | async as user">
+  <ion-list>
+    <h6>Name</h6>
+    <h2>
+      {{user.firstname}} {{user.lastname}}
+    </h2>
+    <h6>Email</h6>
+    <h2>
+      {{user.email}}
+    </h2>
+    <h6>Phone Number</h6>
+    <h2>
+      {{user.phone}}
+    </h2>
+    <h6>Country</h6>
+    <h2>
+      {{user.country}}
+    </h2>
+    <h6>Postal</h6>
+    <h2>
+      {{user.postal}}
+    </h2>
+    <h6>Address</h6>
+    <h2>
+      {{user.streetadd}}, {{user.city}}, {{user.region}}
+    </h2>
+  </ion-list>
+</ion-content>

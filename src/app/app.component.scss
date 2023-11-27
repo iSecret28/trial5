@@ -1,0 +1,65 @@
+ion-menu::part(backdrop) {
+    background-color: transparent;
+  }
+
+ion-menu {
+    --width:350px;
+    --height: 100%; /* Set the height to your desired value */
+    --border-radius:15px;
+    
+}
+ion-content {
+    --background: url('/assets/side_menu_bg.jpg') center center / 350px 100% no-repeat;
+    --background-size:contain;
+}
+  
+  ion-menu ion-menu-toggle {
+    background-color: transparent; /* Make the background transparent */
+    color: #ffffff; /* Set the text color to match the background color */
+    text-align: left; /* Align the text to the left for better blending */
+  }
+  
+
+ion-item {
+    --background: transparent;
+    color: #ffffff;
+    --border-style: none;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+ion-icon {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0;
+    margin-right: 3%;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 5%;
+}
+
+.user_name {
+    color: #ffffff;
+    margin-left: 5%;
+    text-transform: capitalize;
+  }
+
+.avatar {
+    /* Rounded border */
+    border: 2px solid;
+    border-radius: 50%;
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* Size */
+    height: 3rem;
+    width: 3rem;
+}
+.avatar__image {
+   border-radius: 50%;
+}
